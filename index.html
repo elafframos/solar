@@ -4,42 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energia Solar</title>
+    <!-- SEO: Meta Descrição (aparece nos resultados do Google) -->
+    <meta name="description" content="Descubra como a energia solar pode reduzir sua conta de luz e ajudar o meio ambiente. Conheça nossas soluções sustentáveis.">
+    <!-- SEO: Palavras-chave (não tem tanto impacto hoje, mas pode ajudar um pouco) -->
+    <meta name="keywords" content="energia solar, sustentabilidade, economia de energia, painéis solares, energia renovável">
+    <!-- SEO: Autor -->
+    <meta name="author" content="Nome da sua empresa ou seu nome">
+    <!-- Favicon (ícone do site na aba do navegador) -->
+    <link rel="icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="">Inicio</a>
-        <a href="">Serviços</a>
-        <a href="">Contate-nos</a>
-        <button class="botao" onclick="pagina()">Orçamento</button>
-        <a href="">Sobre nós</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰ <!-- Ícone do menu hamburguer -->
+        </div>
+        <div class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contate-nos</a>
+            <button class="botao" onclick="pagina()" aria-label="Solicitar orçamento de energia solar">Orçamento</button>
+            <a href="#sobre">Sobre nós</a>
+        </div>
     </nav>
+    
+    
+    
 
     <main class="main-content">
         <section class="hero-section">
             <div class="overlay"></div>
             <h1>Energia Solar para um Futuro Sustentável</h1>
             <p>Economize na conta de luz e ajude o meio ambiente com soluções inteligentes de energia solar.</p>
+
         </section>        
     
         <section class="benefits">
             <div class="benefit-item">
-                <img src="economia.png" alt="Painéis solares economizando energia">
+                <img src="economia.png" alt="Painéis solares economizando energia" loading="lazy">
                 <h3>Economia Garantida</h3>
                 <p>Reduza seus custos com energia elétrica e aumente sua independência energética.</p>
             </div>
             <div class="benefit-item">
-                <img src="sustentabilidade.png" alt="Painéis solares e meio ambiente">
+                <img src="sustentabilidade.png" alt="Painéis solares e meio ambiente" loading="lazy">
                 <h3>Sustentabilidade</h3>
                 <p>Utilize energia limpa e renovável, ajudando a preservar o meio ambiente.</p>
             </div>
             <div class="benefit-item">
-                <img src="valorização.png" alt="Casa com painel solar valorizada">
+                <img src="valorização.png" alt="Casa com painel solar valorizada" loading="lazy">
                 <h3>Valorização do Imóvel</h3>
                 <p>Imóveis com energia solar são mais valorizados no mercado.</p>
             </div>
         </section>        
     </main>
+
+    <footer>
+        <p>&copy; Energia Solar 2025. Todos os direitos reservados.</p> <!-- Aqui fica a copy -->
+    </footer>
     
     <script src="script.js"></script>
 </body>
