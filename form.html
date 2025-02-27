@@ -3,62 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia Solar - Formulário</title>
+    <title>Energia Solar</title>
+    
+    <!-- SEO: Meta Descrição -->
+    <meta name="description" content="Descubra como a energia solar pode reduzir sua conta de luz e ajudar o meio ambiente. Conheça nossas soluções sustentáveis.">
+    <meta name="keywords" content="energia solar, sustentabilidade, economia de energia, painéis solares, energia renovável">
+    <meta name="author" content="Nome da sua empresa ou seu nome">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    
+    <!-- Pré-carregar CSS para performance -->
+    <link rel="preload" href="form.css" as="style">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <form>
-        <label for="nome-completo">NOME COMPLETO</label> <br>
-        <input type="text" id="nome-completo" required> <br> <br>
+    
+    <!-- NAVBAR -->
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <a href="index.html#inicio">Início</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#contato">Contate-nos</a>
+            <a href="index.html#sobre">Sobre nós</a>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <form>
+            <label for="nome-completo">NOME COMPLETO</label> <br>
+            <input type="text" id="nome-completo" required> <br> <br>
 
-        <label>E-MAIL</label> <br>
-        <input type="email" id="email" required> <br> <br>
+            <label>E-MAIL</label> <br>
+            <input type="email" id="email" required> <br> <br>
 
-        <label for="telefone">TELEFONE</label> <br>
-        <input type="tel" id="telefone" required> <br> <br>
+            <label for="telefone">TELEFONE</label> <br>
+            <input type="tel" id="telefone" required> <br> <br>
 
-        <label for="localizacao">LOCALIZAÇÃO</label> <br>
-        <select id="localizacao">
-            <option>SELECIONE UMA DAS OPÇÕES</option>
-            <option>GOIÂNIA</option>
-            <option>TOCANTINS</option>
-            <option>MATO GROSSO</option>
-            <option>PARÁ</option>
-        </select> <br> <br>
+            <label for="localizacao">LOCALIZAÇÃO</label> <br>
+            <select id="localizacao">
+                <option>SELECIONE UMA DAS OPÇÕES</option>
+                <option>GOIÂNIA</option>
+                <option>TOCANTINS</option>
+                <option>MATO GROSSO</option>
+                <option>PARÁ</option>
+            </select> <br> <br>
 
-        <label for="valor-fatura">MÉDIA DE VALOR DA SUA FATURA</label> <br>
-        <select id="valor-fatura">
-            <option>SELECIONE UMA DAS OPÇÕES</option>
-            <option>R$ 1000 ATÉ R$ 2000</option>
-            <option>R$ 2000 ATÉ R$ 3000</option>
-            <option>R$ 3000 ATÉ R$ 4000</option>
-            <option>R$ 4000 ATÉ R$ 5000</option>
-        </select> <br> <br>
+            <label for="valor-fatura">MÉDIA DE VALOR DA SUA FATURA</label> <br>
+            <select id="valor-fatura">
+                <option>SELECIONE UMA DAS OPÇÕES</option>
+                <option>R$ 1000 ATÉ R$ 2000</option>
+                <option>R$ 2000 ATÉ R$ 3000</option>
+                <option>R$ 3000 ATÉ R$ 4000</option>
+                <option>R$ 4000 ATÉ R$ 5000</option>
+            </select> <br> <br>
 
-        <label for="segmento">SEGMENTO</label> <br>
-        <select id="segmento">
-            <option>SELECIONE UMA DAS OPÇÕES</option>
-            <option>AGRO</option>
-            <option>INDUSTRIAL</option>
-            <option>COMERCIAL</option>
-            <option>RESIDENCIAL</option>
-        </select> <br> <br>
+            <label for="segmento">SEGMENTO</label> <br>
+            <select id="segmento">
+                <option>SELECIONE UMA DAS OPÇÕES</option>
+                <option>AGRO</option>
+                <option>INDUSTRIAL</option>
+                <option>COMERCIAL</option>
+                <option>RESIDENCIAL</option>
+            </select> <br> <br>
 
-        <label for="solucao">SOLUÇÃO</label> <br>
-        <select id="solucao">
-            <option requerid>SELECIONE UMA DAS OPÇÕES</option>
-            <option>PLACA SOLAR</option>
-            <option>BATERIAS</option>
-        </select> <br> <br>
+            <label for="solucao">SOLUÇÃO</label> <br>
+            <select id="solucao">
+                <option requerid>SELECIONE UMA DAS OPÇÕES</option>
+                <option>PLACAS SOLARES</option>
+                <option>BATERIAS</option>
+            </select> <br> <br>
 
-        <label for="mensagem">MENSAGEM</label> <br>
-        <textarea id="mensagem"></textarea> <br> <br>
+            <label for="mensagem">MENSAGEM</label> <br>
+            <textarea id="mensagem"></textarea> <br> <br>
 
-        <input type="checkbox" id="termos" required>
-        <label for="termos">Eu li e aceito todos os termos e condições da <a href="" target="_blank">política de privacidade.</a></label> <br> <br>
+            <input type="checkbox" id="termos" required>
+            <label for="termos">Eu li e aceito todos os termos e condições da <a href="" target="_blank" class="politica">política de privacidade.</a></label> <br> <br>
 
-        <button class="botao">Enviar</button>
-    </form>
+            <button class="botao">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; Energia Solar 2025. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="form.js"></script>
 </body>
