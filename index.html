@@ -4,64 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energia Solar</title>
-    <!-- SEO: Meta Descrição (aparece nos resultados do Google) -->
+    
+    <!-- SEO e Favicon -->
     <meta name="description" content="Descubra como a energia solar pode reduzir sua conta de luz e ajudar o meio ambiente. Conheça nossas soluções sustentáveis.">
-    <!-- SEO: Palavras-chave (não tem tanto impacto hoje, mas pode ajudar um pouco) -->
     <meta name="keywords" content="energia solar, sustentabilidade, economia de energia, painéis solares, energia renovável">
-    <!-- SEO: Autor -->
-    <meta name="author" content="Nome da sua empresa ou seu nome">
-    <!-- Favicon (ícone do site na aba do navegador) -->
-    <link rel="icon" href="icon.png" type="image/x-icon">
+    <meta name="author" content="Nome da sua empresa">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    
+    <!-- Estilos -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <!-- NAVBAR -->
     <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            ☰ <!-- Ícone do menu hamburguer -->
-        </div>
+        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
         <div class="menu">
             <a href="#inicio">Início</a>
             <a href="#servicos">Serviços</a>
             <a href="#contato">Contate-nos</a>
-            <button class="botao" onclick="pagina()" aria-label="Solicitar orçamento de energia solar">Orçamento</button>
             <a href="#sobre">Sobre nós</a>
+            <button class="botao" onclick="pagina()">Orçamento</button>
         </div>
     </nav>
     
-    
-    
-
     <main class="main-content">
-        <section class="hero-section">
+        <!-- SEÇÃO HERO -->
+        <section class="hero-section" id="inicio">
             <div class="overlay"></div>
             <h1>Energia Solar para um Futuro Sustentável</h1>
             <p>Economize na conta de luz e ajude o meio ambiente com soluções inteligentes de energia solar.</p>
-
         </section>        
     
+        <!-- SEÇÃO BENEFÍCIOS -->
         <section class="benefits">
             <div class="benefit-item">
-                <img src="economia.png" alt="Painéis solares economizando energia" loading="lazy">
+                <img src="img/economia.png" alt="Painéis solares economizando energia" loading="lazy">
                 <h3>Economia Garantida</h3>
                 <p>Reduza seus custos com energia elétrica e aumente sua independência energética.</p>
             </div>
             <div class="benefit-item">
-                <img src="sustentabilidade.png" alt="Painéis solares e meio ambiente" loading="lazy">
+                <img src="img/sustentabilidade.png" alt="Painéis solares e meio ambiente" loading="lazy">
                 <h3>Sustentabilidade</h3>
                 <p>Utilize energia limpa e renovável, ajudando a preservar o meio ambiente.</p>
             </div>
             <div class="benefit-item">
-                <img src="valorização.png" alt="Casa com painel solar valorizada" loading="lazy">
+                <img src="img/valorizacao.png" alt="Casa com painel solar valorizada" loading="lazy">
                 <h3>Valorização do Imóvel</h3>
                 <p>Imóveis com energia solar são mais valorizados no mercado.</p>
             </div>
         </section>        
+
+        <!-- SEÇÃO SERVIÇOS -->
+        <section class="services" id="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="service-item">
+                <h3>Instalação de Painéis Solares</h3>
+                <p>Projetamos e instalamos sistemas fotovoltaicos eficientes para sua casa ou empresa.</p>
+            </div>
+            <div class="service-item">
+                <h3>Manutenção e Suporte</h3>
+                <p>Oferecemos manutenção preventiva e corretiva para garantir o máximo desempenho do seu sistema solar.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consultoria Energética</h3>
+                <p>Planejamos soluções personalizadas para maximizar sua economia e sustentabilidade.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section class="contact" id="contato">
+            <h2>Contate-nos</h2>
+            <p>Tem dúvidas? Envie uma mensagem!</p> <br>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- SEÇÃO SOBRE NÓS -->
+        <section class="about" id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa comprometida com a sustentabilidade e a inovação. Nossa missão é levar energia solar acessível e eficiente para todos.</p>
+            <p>Com anos de experiência no setor, oferecemos soluções personalizadas para atender às suas necessidades energéticas.</p>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; Energia Solar 2025. Todos os direitos reservados.</p> <!-- Aqui fica a copy -->
+        <p>&copy; Energia Solar 2025. Todos os direitos reservados.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <!-- Script -->
+    <script src="script.js" defer></script>
 </body>
 </html>
