@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energia Solar</title>
-    
     <!-- SEO e Favicon -->
     <meta name="description" content="Descubra como a energia solar pode reduzir sua conta de luz e ajudar o meio ambiente. Conheça nossas soluções sustentáveis.">
     <meta name="keywords" content="energia solar, sustentabilidade, economia de energia, painéis solares, energia renovável">
-    <meta name="author" content="Nome da sua empresa">
+    <meta name="author" content="Élaff">
+
+    <meta property="og:title" content="Energia Solar - Sustentabilidade e Economia">
+    <meta property="og:description" content="Descubra como a energia solar pode reduzir sua conta de luz e ajudar o meio ambiente.">
+    <meta property="og:image" content="img/banner-solar.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusite.com">
+
     <link rel="icon" href="img/icon.png" type="image/x-icon">
-    
-    <!-- Estilos -->
-    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- NAVBAR -->
-    <nav>
-        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <nav role="navigation">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
         <div class="menu">
             <a href="#inicio">Início</a>
             <a href="#servicos">Serviços</a>
@@ -30,33 +35,30 @@
     </nav>
     
     <main class="main-content">
-        <!-- SEÇÃO HERO -->
         <section class="hero-section" id="inicio">
             <div class="overlay"></div>
             <h1>Energia Solar para um Futuro Sustentável</h1>
             <p>Economize na conta de luz e ajude o meio ambiente com soluções inteligentes de energia solar.</p>
-        </section>        
-    
-        <!-- SEÇÃO BENEFÍCIOS -->
+        </section>     
+
         <section class="benefits">
             <div class="benefit-item">
-                <img src="img/economia.png" alt="Painéis solares economizando energia" loading="lazy">
+                <img src="img/economia.png" alt="Painéis solares economizando energia" loading="lazy" width="60" height="60">
                 <h3>Economia Garantida</h3>
                 <p>Reduza seus custos com energia elétrica e aumente sua independência energética.</p>
             </div>
             <div class="benefit-item">
-                <img src="img/sustentabilidade.png" alt="Painéis solares e meio ambiente" loading="lazy">
+                <img src="img/sustentabilidade.png" alt="Painéis solares e meio ambiente" loading="lazy" width="60" height="60">
                 <h3>Sustentabilidade</h3>
                 <p>Utilize energia limpa e renovável, ajudando a preservar o meio ambiente.</p>
             </div>
             <div class="benefit-item">
-                <img src="img/valorizacao.png" alt="Casa com painel solar valorizada" loading="lazy">
+                <img src="img/valorizacao.png" alt="Casa com painel solar valorizada" loading="lazy" width="60" height="60">
                 <h3>Valorização do Imóvel</h3>
                 <p>Imóveis com energia solar são mais valorizados no mercado.</p>
             </div>
-        </section>        
+        </section>
 
-        <!-- SEÇÃO SERVIÇOS -->
         <section class="services" id="servicos">
             <h2>Nossos Serviços</h2>
             <div class="service-item">
@@ -73,38 +75,62 @@
             </div>
         </section>
 
-        <!-- SEÇÃO CONTATO -->
         <section class="contact" id="contato">
             <h2>Contate-nos</h2>
             <p>Tem dúvidas? Envie uma mensagem!</p> <br>
             <form>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
+                <input type="text" id="nome" name="nome" required autocomplete="name" aria-label="Nome completo">
+            
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-
+                <input type="email" id="email" name="email" required autocomplete="email" aria-label="Seu e-mail">
+            
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-                <button type="submit">Enviar</button>
+                <textarea id="mensagem" name="mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
+            
+                <button type="submit">Enviar</button>            
             </form>
         </section>
 
-        <!-- SEÇÃO SOBRE NÓS -->
+        <div class="about-video">
+            <h3>Conheça mais sobre nosso trabalho</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div> <br><br>   
+
         <section class="about" id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma empresa comprometida com a sustentabilidade e a inovação. Nossa missão é levar energia solar acessível e eficiente para todos.</p>
-            <p>Com anos de experiência no setor, oferecemos soluções personalizadas para atender às suas necessidades energéticas.</p>
+            <h2>Quem Somos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Somos uma empresa apaixonada por sustentabilidade e inovação, comprometida em tornar a energia solar acessível para todos.  
+                        Nossa missão é proporcionar soluções eficientes e econômicas para residências e empresas que desejam reduzir custos e impacto ambiental.
+                    </p>
+                    <p>
+                        Com <strong>anos de experiência</strong> no setor, contamos com uma equipe altamente qualificada para projetar, instalar e manter sistemas fotovoltaicos 
+                        de alto desempenho. Trabalhamos com tecnologia de ponta para garantir eficiência e confiabilidade em cada projeto.
+                    </p>
+                    <p>
+                        Junte-se a centenas de clientes satisfeitos que já estão economizando com energia limpa e renovável!
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="img/equipe-solar.jpg" alt="Equipe de especialistas em energia solar trabalhando">
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <a href="https://wa.me/5562993870271?text=Olá!%20Tenho%20interesse%20em%20energia%20solar.%20Pode%20me%20ajudar?" 
+   class="whatsapp-button" 
+   target="_blank" 
+   aria-label="Fale conosco pelo WhatsApp">
+    <img src="img/icon.whatsapp.jpeg" alt="Ícone do WhatsApp">
+    </a>
+    
     <footer>
         <p>&copy; Energia Solar 2025. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script -->
     <script src="script.js" defer></script>
 </body>
 </html>
